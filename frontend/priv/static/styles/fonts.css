@@ -1,0 +1,43 @@
+@font-face {
+	font-family: "bricolage";
+	font-weight: 100 200 300 400 500 600 700 800 900;
+	font-style: normal bold italic;
+	font-display: swap;
+	src: url("/fonts/bricolage/bricolage.ttf");
+}
+
+@font-face {
+	font-family: "mono";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("/fonts/space_mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+	font-family: "mono";
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	src: url("/fonts/space_mono/SpaceMono-Italic.ttf");
+}
+
+@font-face {
+	font-family: "mono";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("/fonts/space_mono/SpaceMono-Bold.ttf");
+}
+
+@font-face {
+	font-family: "mono";
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url("/fonts/space_mono/SpaceMono-BoldItalic.ttf");
+}
+
+html {
+	font-family: "bricolage", system-ui, sans-serif;
+}
