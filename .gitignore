@@ -1,0 +1,7 @@
+/frontend/.DS_Store
+/frontend/node_modules/
+
+# React Router
+/frontend/.react-router/
+/frontend/build/
+/server/target/
