@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  phoenix_app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: phoenix_app_prod
+    container_name: phoenix_app
+    environment:
+      MIX_ENV: prod
+      HOST: 0.0.0.0
+      PORT: 4000
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+    ports:
+      - "80:80"
+    depends_on:
+      - rocket_server
+    restart: unless-stopped
+    networks:
+      - backend
+
+  rocket_server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: rocket_server_prod
+    container_name: rocket_server
+    environment:
+      ROCKET_ENV: prod
+    # No published ports → internal only
+    expose:
+      - "8000"
+    restart: on-failure
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
+    driver: bridge

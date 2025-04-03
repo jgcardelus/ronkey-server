@@ -19,7 +19,7 @@ defmodule Frontend.MixProject do
   def application do
     [
       mod: {Frontend.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:websockex, :logger, :runtime_tools]
     ]
   end
 
@@ -55,7 +55,8 @@ defmodule Frontend.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      {:websockex, "~> 0.4.3"}
     ]
   end
 

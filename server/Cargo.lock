@@ -1191,7 +1191,7 @@ dependencies = [
 [[package]]
 name = "ronkey"
 version = "0.1.0"
-source = "git+https://github.com/jgcardelus/ronkey?rev=2f22650#2f226505026f4d5b3aa131f09e8d61fa60852b88"
+source = "git+https://github.com/jgcardelus/ronkey?rev=d463372#d463372cc505c045509475e1d9fda34d6fa94f08"
 
 [[package]]
 name = "rustc-demangle"

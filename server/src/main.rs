@@ -26,6 +26,11 @@ fn echo(ws: ws::WebSocket) -> ws::Channel<'static> {
     })
 }
 
+#[launch]
+fn rocket() -> _ {
+    rocket::build().mount("/", routes![index, echo])
+}
+
 async fn process_message(
     stream: &mut ws::stream::DuplexStream,
     environment: &sync::Arc<sync::Mutex<environment::Environment>>,
@@ -74,9 +79,4 @@ async fn send_evaluation_result(
     let result = serde_json::to_string(&result).unwrap();
 
     stream.send(result.into()).await
-}
-
-#[launch]
-fn rocket() -> _ {
-    rocket::build().mount("/", routes![index, echo])
 }
