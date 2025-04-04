@@ -48,7 +48,7 @@ if config_env() == :prod do
       ip: {0, 0, 0, 0, 0, 0, 0, 0},
       port: port
     ],
-    check_origin: ["http://localhost:4000", "ws://rocket_server:8000"],
+    check_origin: ["http://localhost:4000", "ws://rocket_server:8000", "http://localhost"],
     secret_key_base: secret_key_base,
     server: true
 
