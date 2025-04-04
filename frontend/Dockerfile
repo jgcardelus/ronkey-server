@@ -28,8 +28,8 @@ RUN apt-get update -y && apt-get install -y build-essential git curl wget \
 WORKDIR /app
 
 # install hex + rebar
-RUN mix local.hex --force --verbose && \
-	mix local.rebar --force  --verbose
+# RUN mix local.hex --force --verbose && \
+# mix local.rebar --force  --verbose
 
 # set build ENV
 ENV MIX_ENV="prod"
